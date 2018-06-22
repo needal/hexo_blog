@@ -28,7 +28,7 @@ website_uri: https://github.com/needal
 # favicon.ico
 # head.ejs
 favicon: /hexo_blog/public/deps/partial/imgs/favicon.ico
-avatar: /hexo_blog/publicdeps/partial/imgs/avatar.jpg
+avatar: /hexo_blog/public/deps/partial/imgs/avatar.jpg
 # banner image
 # /archive.ejs and /page.ejs
 uri_banner: /hexo_blog/public/deps/partial/imgs/banner_sky-line.jpg
