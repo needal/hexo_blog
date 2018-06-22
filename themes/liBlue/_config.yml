@@ -23,7 +23,9 @@ gitment_oauth_secret:
 # website property
 # footer.ejs
 website_name: 此夜掩目的博客
-website_uri: https://github.com/needal
+website_uri: https://hexo.io/zh-cn/docs
+footer_name: created by
+footer_uri: https://github.com/needal
 
 # favicon.ico
 # head.ejs
