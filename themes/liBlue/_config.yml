@@ -27,41 +27,41 @@ website_uri: https://github.com/needal
 
 # favicon.ico
 # head.ejs
-favicon: /hexo_blog/public/deps/partial/imgs/favicon.ico
-avatar: /hexo_blog/public/deps/partial/imgs/avatar.jpg
+favicon: /hexo_blog/deps/partial/imgs/favicon.ico
+avatar: /hexo_blog/deps/partial/imgs/avatar.jpg
 # banner image
 # /archive.ejs and /page.ejs
-uri_banner: /hexo_blog/public/deps/partial/imgs/banner_sky-line.jpg
+uri_banner: /hexo_blog/deps/partial/imgs/banner_sky-line.jpg
 
 # style.css
 # head.ejs
-uri_mincss_style: /hexo_blog/public/deps/css/style.css
+uri_mincss_style: /hexo_blog/deps/css/style.css
 
 # function.min.js
 # footer.ejs
-uri_minjs_function: /hexo_blog/public/deps/js/function.min.js
+uri_minjs_function: /hexo_blog/deps/js/function.min.js
 
 # jquery.min.js
 # head.ejs
 #uri_minjs_jquery: //cdn.bootcss.com/jquery/3.2.1/jquery.min.js
-uri_minjs_jquery: /hexo_blog/public/deps/js/jquery.min.js
+uri_minjs_jquery: /hexo_blog/deps/js/jquery.min.js
 
 # nprogress css+js
 # head.ejs
 #uri_mincss_nprogress: //cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css
-uri_mincss_nprogress: /hexo_blog/public/deps/partial/mincss/nprogress.min.css
+uri_mincss_nprogress: /hexo_blog/deps/partial/mincss/nprogress.min.css
 #uri_minjs_nprogress: //cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js
-uri_minjs_nprogress: /hexo_blog/public/deps/js/nprogress.min.js
+uri_minjs_nprogress: /hexo_blog/deps/js/nprogress.min.js
 
 # prism css+js
 # head.ejs
-uri_mincss_prism: /hexo_blog/public/deps/partial/mincss/prism.min.css
-uri_minjs_prism: /hexo_blog/public/deps/js/prism.min.js
+uri_mincss_prism: /hexo_blog/deps/partial/mincss/prism.min.css
+uri_minjs_prism: /hexo_blog/deps/js/prism.min.js
 
 # gitment css+js
 # head.ejs
-uri_mincss_gitment: /hexo_blog/public/deps/partial/mincss/gitment.min.css
-uri_minjs_gitment: /hexo_blog/public/deps/js/gitment.min.js
+uri_mincss_gitment: /hexo_blog/deps/partial/mincss/gitment.min.css
+uri_minjs_gitment: /hexo_blog/deps/js/gitment.min.js
 
 # google analytics
 # footer.ejs
