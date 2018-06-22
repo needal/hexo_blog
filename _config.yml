@@ -12,7 +12,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://localhost:4040
+url: https://needal.github.io/hexo_blog/public/index.html
 root: /
 permalink: article/:title/
 permalink_defaults:

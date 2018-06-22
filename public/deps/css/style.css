@@ -391,15 +391,11 @@ h2.article-head {
 .logo-svg {
   width: 200px;
   height: 200px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   vertical-align: top;
   fill: currentColor;
   line-height: 1;
   text-align: center;
-}
-.logo-svg image {
-  width: 100%;
-  height: 100%;
 }
 .home-link {
   display: flex;
@@ -432,7 +428,6 @@ h2.article-head {
   color: #fff;
   padding-bottom: 4px;
   transition: 0.15s ease-in-out;
-  letter-spacing: 3px;
 }
 .item-link:hover {
   border-bottom: 3px solid #6cf;
