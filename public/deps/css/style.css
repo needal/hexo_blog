@@ -203,7 +203,7 @@ h2.article-head {
   box-shadow: 0 0 3px 0 rgba(0,0,0,0.12), 0 3px 3px 0 rgba(0,0,0,0.24);
 }
 .scroll-top .arrow-icon {
-  background-image: url("/deps/partial/imgs/top.png");
+  background-image: url("/hexo_blog/public/deps/partial/imgs/top.png");
   width: 30px;
   height: 30px;
   display: block;
@@ -311,7 +311,7 @@ h2.article-head {
   height: 22px;
   left: 0;
   top: 2px;
-  background: url("/deps/partial/imgs/catalog.png") no-repeat;
+  background: url("/hexo_blog/public/deps/partial/imgs/catalog.png") no-repeat;
   background-size: contain;
 }
 .catalog-container .toc-main .toc-nav {
