@@ -17,9 +17,10 @@
         <script src="/deps/js/jquery.min.js"      type="application/javascript"></script>
         <link  href="/deps/partial/mincss/nprogress.min.css"  type="text/css" rel="stylesheet">
         <script src="/deps/js/nprogress.min.js"   type="application/javascript"></script>
+        <link href="/deps/partial/mincss/animate.min.css"   type="text/css" rel="stylesheet">
     
         <link  href="/deps/partial/mincss/prism.min.css"      type="text/css" rel="stylesheet">
-        <script src="/deps/js/prism.min.js"       type="application/javascript"></script>
+        <script src="/deps/js/prism.min.js"   type="application/javascript"></script>
         <link  href="/deps/partial/mincss/gitment.min.css"    type="text/css" rel="stylesheet">
         <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
     
@@ -71,23 +72,25 @@
 <main class="app-body flex-box">
     <article class="post-article">
         <section class="markdown-content">
-            <h1 id="这是我第一篇使用hexo搭建的博客"><a href="#这是我第一篇使用hexo搭建的博客" class="headerlink" title="这是我第一篇使用hexo搭建的博客"></a><em>这是我第一篇使用hexo搭建的博客</em></h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。目前很多都使用它建立博客，类似于PHP的wordpress，毕竟后端人员前端都不好。</p>
-<h1 id="hexo命令"><a href="#hexo命令" class="headerlink" title="hexo命令"></a>hexo命令</h1><h2 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h2><blockquote>
-<p>init a hexo project<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init <span class="string">"my Hexo"</span></span><br></pre></td></tr></table></figure></p>
+            <h1 id="这是我第一篇使用hexo搭建的博客"><a href="#这是我第一篇使用hexo搭建的博客" class="headerlink" title="这是我第一篇使用hexo搭建的博客"></a>这是我第一篇使用hexo搭建的博客</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。目前很多都使用它建立博客，类似于PHP的wordpress，毕竟后端人员前端都不好。</p>
+<h2 id="这里介绍下hexo安装和使用的命令"><a href="#这里介绍下hexo安装和使用的命令" class="headerlink" title="这里介绍下hexo安装和使用的命令"></a>这里介绍下hexo安装和使用的命令</h2><h2 id="hexo-init"><a href="#hexo-init" class="headerlink" title="hexo init"></a>hexo init</h2><ol>
+<li>init a hexo project<br><pre class="lang-js"><code><br>$ hexo init “my Hexo”</code></pre></li>
+</ol>
+<h2 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h2><ol start="2">
+<li>Create a new post<br><pre class="lang-js"><code><br>$ hexo new “My New Post”</code></pre></li>
+</ol>
+<h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo server"></a>hexo server</h2><ol start="3">
+<li>Run server<br><pre class="lang-js"><code><br>$ hexo server</code></pre></li>
+</ol>
+<h2 id="hexo-generate"><a href="#hexo-generate" class="headerlink" title="hexo generate"></a>hexo generate</h2><ol start="4">
+<li>Generate static files<br><pre class="lang-js"><code><br>$ hexo generate</code></pre></li>
+</ol>
+<h2 id="hexo-deploy"><a href="#hexo-deploy" class="headerlink" title="hexo deploy"></a>hexo deploy</h2><ol start="5">
+<li>Deploy to remote sites<br><pre class="lang-js"><code><br>$ hexo deploy</code></pre></li>
+</ol>
+<blockquote>
+<p>want to know <a href="https://hexo.io/docs" target="_blank" rel="noopener">More info</a></p>
 </blockquote>
-<h2 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h2><blockquote>
-<p>Create a new post<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="hexo-server"><a href="#hexo-server" class="headerlink" title="hexo server"></a>hexo server</h2><blockquote>
-<p> Run server<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="hexo-generate"><a href="#hexo-generate" class="headerlink" title="hexo generate"></a>hexo generate</h2><blockquote>
-<p>Generate static files<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="hexo-deploy"><a href="#hexo-deploy" class="headerlink" title="hexo deploy"></a>hexo deploy</h2><blockquote>
-<p>Deploy to remote sites<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p> want to know <a href="https://hexo.io/docs" target="_blank" rel="noopener">More info</a></p>
 
         </section>
         </br>
@@ -125,7 +128,7 @@
     <div class="toc-main">
         <strong class="toc-title">Catalog</strong>
         
-            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#这是我第一篇使用hexo搭建的博客"><span class="toc-nav-text">这是我第一篇使用hexo搭建的博客</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#hexo命令"><span class="toc-nav-text">hexo命令</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-init"><span class="toc-nav-text">hexo init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-new"><span class="toc-nav-text">hexo new</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-server"><span class="toc-nav-text">hexo server</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-generate"><span class="toc-nav-text">hexo generate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-deploy"><span class="toc-nav-text">hexo deploy</span></a></li></ol></li></ol>
+            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#这是我第一篇使用hexo搭建的博客"><span class="toc-nav-text">这是我第一篇使用hexo搭建的博客</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#这里介绍下hexo安装和使用的命令"><span class="toc-nav-text">这里介绍下hexo安装和使用的命令</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-init"><span class="toc-nav-text">hexo init</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-new"><span class="toc-nav-text">hexo new</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-server"><span class="toc-nav-text">hexo server</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-generate"><span class="toc-nav-text">hexo generate</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#hexo-deploy"><span class="toc-nav-text">hexo deploy</span></a></li></ol></li></ol>
         
     </div>
 </aside>
