@@ -13,15 +13,15 @@ tags:
 下载完主题放到本地hexo的themes下，一改config配置的主题，帅气敲下npm install和hexo s,命令行显示启动成功，打开默认的localhost:4000一看进不去，绞尽脑汁也想不通为什么，网上找了一会，终于找到答案：端口被占了。
 敲下netstat -t | findstr '4000'果然有个进程，网上找了下这个进程好像是win7系统的，于是便去官网找如何配置默认端口，也被我找到了。
 hexo默认有一系列配置，都在node_modules/hexo_*下的js中，其中默认端口在hexo-server/index.js中，修改完毕后重新启动，终于见到了（ 黑长直 ~(@^_^@)~ ）
-``` bash
+<pre class="lang-js"><code>
 hexo.config.server = assign({
-  port: 4000,
-  log: false,
-  ip: '0.0.0.0',
-  compress: false,
-  header: true
+    port: 4000,
+    log: false,
+    ip: '0.0.0.0',
+    compress: false,
+    header: true,
 }, hexo.config.server);
-```
+
 ## 再摔泥潭
 眼看本地运行没有问题了，便打算hexo generate生成静态文件放到github上（又可以开始表演了 →_→ ）
 然而现实是骨感的，怎么只有字，还一大片的空白，我的图片样式呢！我的面包飞机呢！打开控制台，一看一大顿404，我一看请求的地址，再跟我github page的首页对比了下（我眉头一点也不皱甚至都有点小开心），这肯定是地址有问题。
@@ -33,4 +33,3 @@ hexo.config.server = assign({
 我也是刚刚开始写博客，打算就记录一下自己遇到的问题，也打算当成一个家来装饰（我的世界玩多了哈）。
 对于markdown，我还有好多语法不会，所以目前也只是纯文字的，打算后续等我会了再来加几张图片。
 这个hexo的主题也有好多样式和设置要改，目前来说能看就ok了，对于我这个前段渣来说，改样式真是非常难受的事情，只能慢慢改了。
-

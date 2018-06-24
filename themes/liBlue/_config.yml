@@ -39,6 +39,10 @@ uri_banner: /deps/partial/imgs/banner_sky-line.jpg
 # head.ejs
 uri_mincss_style: /deps/css/style.css
 
+# animate.min.css
+# head.ejs
+uri_mincss_animate: /deps/partial/mincss/animate.min.css
+
 # function.min.js
 # footer.ejs
 uri_minjs_function: /deps/js/function.min.js
