@@ -389,17 +389,13 @@ h2.article-head {
   margin-right: 10px;
 }
 .logo-svg {
-  width: 200px;
-  height: 200px;
-  margin-bottom: 30px;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 40px;
   vertical-align: top;
   fill: currentColor;
   line-height: 1;
   text-align: center;
-}
-.logo-svg image {
-  height: 100%;
-  width: 100%;
 }
 .home-link {
   display: flex;
