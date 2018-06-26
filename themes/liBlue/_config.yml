@@ -30,10 +30,11 @@ footer_uri: https://github.com/needal
 # favicon.ico
 # head.ejs
 favicon: /deps/partial/imgs/favicon.ico
-avatar: /deps/partial/imgs/avatar.jpg
+avatar: /deps/partial/imgs/index/avatar.jpg
 # banner image
 # /archive.ejs and /page.ejs
-uri_banner: /deps/partial/imgs/banner_sky-line.jpg
+index_uri_banner: /deps/partial/imgs/index/banner_sky-line.jpg
+pages_uri_banner: /deps/partial/imgs/pages/banner_girl.png
 
 # style.css
 # head.ejs

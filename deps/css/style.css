@@ -311,7 +311,7 @@ h2.article-head {
   height: 22px;
   left: 0;
   top: 2px;
-  background: url("/deps/partial/imgs/catalog.png") no-repeat;
+  background: url("/deps/partial/imgs/pages/catalog.png") no-repeat;
   background-size: contain;
 }
 .catalog-container .toc-main .toc-nav {
