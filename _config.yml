@@ -78,7 +78,7 @@ theme: liBlue
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/needal/hexo_blog
+  repo: git@github.com:needal/hexo_blog.git
   branch: hexo
   message: hexo deploy msg sign
 
