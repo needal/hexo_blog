@@ -80,7 +80,7 @@ deploy:
   type: git
   repo: git@github.com:needal/hexo_blog.git
   branch: hexo
-  message: hexo deploy msg sign
+  message: hexo deploy message sign
 
 jsonContent:
   meta: false
