@@ -65,6 +65,11 @@ uri_minjs_nprogress: /deps/js/nprogress.min.js
 uri_mincss_prism: /deps/partial/mincss/prism.min.css
 uri_minjs_prism: /deps/js/prism.min.js
 
+# fancybox css+js
+# head.ejs
+uri_mincss_fancybox: /deps/partial/mincss/fancybox.min.css
+uri_minjs_fancybox: /deps/js/fancybox.min.js
+
 # gitment css+js
 # head.ejs
 uri_mincss_gitment: /deps/partial/mincss/gitment.min.css
