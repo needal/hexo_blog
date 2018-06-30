@@ -21,7 +21,10 @@
     
         <link  href="/deps/partial/mincss/prism.min.css"      type="text/css" rel="stylesheet">
         <script src="/deps/js/prism.min.js"   type="application/javascript"></script>
+        <link  href="/deps/partial/mincss/fancybox.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/fancybox.min.js"     type="application/javascript"></script>
         <link  href="/deps/partial/mincss/gitment.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
         <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
     
 </head>
@@ -143,7 +146,15 @@
             oauth: {client_id: "", client_secret: ""},
             theme: {render(state, instance){const container = document.createElement('div');container.lang="en-US";container.className='gitment-container gitment-root-container';container.appendChild(instance.renderHeader(state, instance));container.appendChild(instance.renderEditor(state, instance));container.appendChild(instance.renderComments(state, instance));container.appendChild(instance.renderFooter(state, instance));return container;}}
         })
-        gitment.render(document.getElementById('comments'))
+        gitment.render(document.getElementById('comments'));
+        $.fancybox.defaults.wheel = false;
+        $.fancybox.defaults.infobar = false;
+         $.fancybox.defaults.buttons = [
+        'fullScreen',
+        // 'thumbs',
+        'zoom',
+        'close'
+        ];
     }
 })();</script>
         <div class="scroll-top">
