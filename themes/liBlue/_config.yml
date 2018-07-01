@@ -10,11 +10,10 @@ catalog: true
 
 # gitment
 gitment: true
-gitment_owner: 
-gitment_repo: 
-gitment_oauth_id: 
-gitment_oauth_secret: 
-
+gitment_owner: needal
+gitment_repo: hexo_blog
+gitment_oauth_id: 6de9f8a023dba13d8ab7
+gitment_oauth_secret: bb250d74da3906094ed23569090954df00e66de0
 
 ##############################################################
 # the following is the variable of dir

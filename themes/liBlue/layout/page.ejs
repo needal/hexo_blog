@@ -30,6 +30,7 @@
 })();</script>
 
 <script>(function(){
+    // gitment
     var gitmentConfig = "<%= theme['gitment_owner'] %>"
     if (gitmentConfig !== 'undefined') {
         var gitment = new Gitment({
@@ -40,13 +41,14 @@
             theme: {render(state, instance){const container = document.createElement('div');container.lang="en-US";container.className='gitment-container gitment-root-container';container.appendChild(instance.renderHeader(state, instance));container.appendChild(instance.renderEditor(state, instance));container.appendChild(instance.renderComments(state, instance));container.appendChild(instance.renderFooter(state, instance));return container;}}
         })
         gitment.render(document.getElementById('comments'));
-        $.fancybox.defaults.wheel = false;
-        $.fancybox.defaults.infobar = false;
-         $.fancybox.defaults.buttons = [
+    }
+    // fancybox
+    $.fancybox.defaults.wheel = false;
+    $.fancybox.defaults.infobar = false;
+    $.fancybox.defaults.buttons = [
         'fullScreen',
         // 'thumbs',
         'zoom',
         'close'
-        ];
-    }
+    ];
 })();</script>
