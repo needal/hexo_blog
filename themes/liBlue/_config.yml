@@ -3,7 +3,9 @@ excerpt_link: Read_More
 # menu on the page
 menu:
  首页: /
- 归档: /archive/
+ 归档: /archives/
+ 关于: /about
+#  link: 
 
 # article catalog
 catalog: true
