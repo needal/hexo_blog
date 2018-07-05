@@ -7,17 +7,17 @@
     <link href="<%- theme.favicon %>" type="image/x-icon" rel="icon">
     <% } %>
     <title>
-    <% if (page.title){ %>
-        <%= page.title %> | <%= config.title %>
-    <% } else { %>
-        <%= config.title %>
-    <% } %>
+        <% if (page.title){ %>
+            <%= page.title %>
+        <% } else { %>
+            <%= config.title %>
+        <% } %>
     </title>
-        <link  href="<%- theme.uri_mincss_style %>"      type="text/css" rel="stylesheet">
-        <script src="<%- theme.uri_minjs_jquery %>"      type="application/javascript"></script>
-        <link  href="<%- theme.uri_mincss_nprogress %>"  type="text/css" rel="stylesheet">
-        <script src="<%- theme.uri_minjs_nprogress %>"   type="application/javascript"></script>
-        <link href="<%- theme.uri_mincss_animate %>"   type="text/css" rel="stylesheet">
+    <link  href="<%- theme.uri_mincss_style %>"      type="text/css" rel="stylesheet">
+    <script src="<%- theme.uri_minjs_jquery %>"      type="application/javascript"></script>
+    <link  href="<%- theme.uri_mincss_nprogress %>"  type="text/css" rel="stylesheet">
+    <script src="<%- theme.uri_minjs_nprogress %>"   type="application/javascript"></script>
+    <link href="<%- theme.uri_mincss_animate %>"   type="text/css" rel="stylesheet">
     <% if (page.title){ %>
         <link  href="<%- theme.uri_mincss_prism %>"      type="text/css" rel="stylesheet">
         <script src="<%- theme.uri_minjs_prism %>"   type="application/javascript"></script>
@@ -33,7 +33,7 @@
             // 百度统计
             if('<%- theme.baiduanalytics %>'){
                 var hm = document.createElement("script");
-                hm.src = "<%= baiduanalytics_uri %>";
+                hm.src = "<%- theme.baiduanalytics_uri %>";
                 var s = document.getElementsByTagName("script")[0]; 
                 s.parentNode.insertBefore(hm, s);
             }
@@ -49,9 +49,13 @@
                 }
                 var s = document.getElementsByTagName("script")[0];
                 s.parentNode.insertBefore(bp, s);
-        }
+            }
             window.onfocus = function () {
-                document.title = '<%- theme.website_name %>';
+                if ('<%- page.title %>'){
+                    document.title = '<%- page.title %>';
+                } else {
+                    document.title = '<%- config.title %>';
+                }
             };
             window.onblur = function () {
                 document.title = ' 等死 (～ o ～)~zZ';
