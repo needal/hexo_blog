@@ -30,10 +30,32 @@
     <script>
         var _hmt = _hmt || [];
         (function() {
-          var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9";
-          var s = document.getElementsByTagName("script")[0]; 
-          s.parentNode.insertBefore(hm, s);
+            // 百度统计
+            if('<%- theme.baiduanalytics %>'){
+                var hm = document.createElement("script");
+                hm.src = "<%= baiduanalytics_uri %>";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            }
+            // 百度js推送
+            if('<%- theme.baidu_push %>'){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            }
+            window.onfocus = function () {
+                document.title = '<%- theme.website_name %>';
+            };
+            window.onblur = function () {
+                document.title = ' 等死 (～ o ～)~zZ';
+            };
         })();
     </script>        
 </head>

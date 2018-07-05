@@ -82,4 +82,9 @@ googleanalytics_id:
 googleanalytics_uri: https://www.google-analytics.com/analytics.js
 
 # baidu analytics
+baiduanalytics: true
 baiduanalytics_uri: https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9
+
+
+## Enable baidu SEO push 
+baidu_push: true
