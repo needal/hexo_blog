@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <link href="/deps/partial/imgs/favicon.ico" type="image/x-icon" rel="icon">
+    
+    <title>
+        
+            prism和animation舔砖加瓦
+        
+    </title>
+    <link  href="/deps/css/style.css"      type="text/css" rel="stylesheet">
+    <script src="/deps/js/jquery.min.js"      type="application/javascript"></script>
+    <link  href="/deps/partial/mincss/nprogress.min.css"  type="text/css" rel="stylesheet">
+    <script src="/deps/js/nprogress.min.js"   type="application/javascript"></script>
+    <link href="/deps/partial/mincss/animate.min.css"   type="text/css" rel="stylesheet">
+    
+        <link  href="/deps/partial/mincss/prism.min.css"      type="text/css" rel="stylesheet">
+        <script src="/deps/js/prism.min.js"   type="application/javascript"></script>
+        <link  href="/deps/partial/mincss/fancybox.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/fancybox.min.js"     type="application/javascript"></script>
+        <link  href="/deps/partial/mincss/gitment.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
+        <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
+       
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            // 百度统计
+            if('true'){
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            }
+            // 百度js推送
+            if('true'){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            }
+            window.onfocus = function () {
+                if ('prism和animation舔砖加瓦'){
+                    document.title = 'prism和animation舔砖加瓦';
+                } else {
+                    document.title = '此夜掩目的博客';
+                }
+            };
+            window.onblur = function () {
+                document.title = ' 等死 (～ o ～)~zZ';
+            };
+        })();
+    </script>        
+</head>
+    <body>
+        <header class="header fixed-header">
+    <div class="header-container">
+        <a class="home-link" href="/">
+            此夜掩目的博客
+        </a>
+        <ul class="right-list">
+            
+                <li class="list-item">
+                    
+                        <a href="/" class="item-link">首页</a>
+                    
+                </li>
+            
+                <li class="list-item">
+                    
+                        <a href="/archives/" class="item-link">归档</a>
+                    
+                </li>
+            
+                <li class="list-item">
+                    
+                        <a href="/about" class="item-link">关于</a>
+                    
+                </li>
+            
+        </ul>
+        <div class="menu-mask">
+            <ul class="menu-list">
+                
+                    <li class="menu-item">
+                        
+                            <a href="/" class="menu-link">首页</a>
+                        
+                    </li>
+                
+                    <li class="menu-item">
+                        
+                            <a href="/archives/" class="menu-link">归档</a>
+                        
+                    </li>
+                
+                    <li class="menu-item">
+                        
+                            <a href="/about" class="menu-link">关于</a>
+                        
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</header>
+        <div id="article-banner">
+    <h2>prism和animation舔砖加瓦</h2>
+    <p class="post-date">06/24/2018</p>
+</div>
+<main class="app-body flex-box">
+    <article class="post-article">
+        <section class="markdown-content">
+            <h1 id="发现新大陆"><a href="#发现新大陆" class="headerlink" title="发现新大陆"></a>发现新大陆</h1><p>今天打算看看主题里面的代码，在查看其引用的文件中，发现了他引用了prism.min.js和animate.min.css这个两个文件。于是我去查了下这两个东东的用途（⊙.⊙），发现是一个用来高亮代码的（感觉不错，以后可以贴代码了，新技能get），一个是常用css动画效果（魅力值+10的好东西），就立马开始用起来的 (..•˘_˘•..) 。</p>
+<h1 id="Prism-js高亮插件"><a href="#Prism-js高亮插件" class="headerlink" title="Prism.js高亮插件"></a>Prism.js高亮插件</h1><p>网页代码高亮的插件网上好像很多的，例如：SyntaxHighlighter ，Google Code Prettify和Highlight.js等等。公司项目里用的就是Highlight.js，不过好像用起来有点麻烦。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>Prism.js有着简单、小巧好用的优点。你需要先去<a href="https://prismjs.com/index.html" target="_blank" rel="noopener">官网</a>下载js和css文件，下载的时候支持自定义，勾选要支持的语言和主题可以减小文件的大小，然后在html中导入js和css文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;link href=&quot;themes/prism.css&quot; rel=&quot;stylesheet&quot; /&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;script src=&quot;prism.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如果要在html中高亮代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre class=&quot;lang-js&quot;&gt;&lt;code&gt;p &#123; color: red &#125;&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure></p>
+<p>如果要在js中高亮代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Prism.highlightElement(element, async, callback)</span><br></pre></td></tr></table></figure></p>
+<p>element为有language-xxx的class。</p>
+<h1 id="animotion-css动画插件"><a href="#animotion-css动画插件" class="headerlink" title="animotion css动画插件"></a>animotion css动画插件</h1><p>Animate.css是一个有趣的，跨浏览器的css3动画库，<a href="https://github.com/daneden/animate.css" target="_blank" rel="noopener">github地址</a>。以及有一个<a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">效果展示地址</a>，可以查看对比动画效果,对于我这种小白使用起来很方便。</p>
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><p>引入css文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;animate.min.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></p>
+<p>给div加上class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;animated bounceOutLeft&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>也可以等动画执行完毕后添加回调事件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;#yourElement&apos;).one(&apos;webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend&apos;, doSomething);</span><br></pre></td></tr></table></figure></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>目前暂时就头像用了动画，后续还要加样式、改自定义样式；以及这个代码高亮也有点问题，我在markdown里面嵌入code标签后预览是好的，但是渲染出来不会换行，只能多个code标签才行，有点吐血。<br>只能等我有空再慢慢改咯  ╮(๑•́ ₃•̀๑)╭ 。</p>
+
+        </section>
+        </br>
+        <div class="article-footer">
+            </br>
+            <p>本文可能过时失效，若需更新，请留言</p>
+            <p>本博客文章均为原创，转载请注明来源</p>
+        </div>
+        
+    <div class="nav-container">
+        
+            <a class="nav-right" href="/article/hexo-detail/">
+                
+                    hexo搭建遇到的问题总结
+                
+                <span class="nav-arrow"> →</span>
+            </a>
+        
+        
+            <a class="nav-left" href="/article/blog-devops/">
+                <span class="nav-arrow">← </span>
+                
+                    尝尝自动部署的甜头
+                
+            </a>
+        
+    </div>
+
+        
+            <div id="comments"></div>
+        
+    </article>
+    
+        <aside class="catalog-container">
+    <div class="toc-main">
+        <strong class="toc-title">Catalog</strong>
+        
+            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#发现新大陆"><span class="toc-nav-text">发现新大陆</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Prism-js高亮插件"><span class="toc-nav-text">Prism.js高亮插件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#使用"><span class="toc-nav-text">使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#animotion-css动画插件"><span class="toc-nav-text">animotion css动画插件</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#使用-1"><span class="toc-nav-text">使用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#小结"><span class="toc-nav-text">小结</span></a></li></ol>
+        
+    </div>
+</aside>
+    
+</main>
+
+<script>(function(){
+    var banner = "/deps/partial/imgs/pages/banner_girl.png";
+    $('#article-banner').css({'background-image': 'url(' + banner + ')'});
+    $('#article-banner').css('padding','11% 20px 40px');
+    $('#article-banner').css('background-position','50% 60%');
+    $('.header').removeClass('fixed-header');
+})();</script>
+
+<script>(function(){
+    // gitment
+    var gitmentConfig = "needal"
+    if (gitmentConfig !== 'undefined') {
+        var gitment = new Gitment({
+            //id: "article/use-prims_js/",
+            owner: "needal",
+            repo: "hexo_blog",
+            oauth: {client_id: "6de9f8a023dba13d8ab7", client_secret: "bb250d74da3906094ed23569090954df00e66de0"},
+            theme: {render(state, instance){const container = document.createElement('div');container.lang="en-US";container.className='gitment-container gitment-root-container';container.appendChild(instance.renderHeader(state, instance));container.appendChild(instance.renderEditor(state, instance));container.appendChild(instance.renderComments(state, instance));container.appendChild(instance.renderFooter(state, instance));return container;}}
+        })
+        gitment.render(document.getElementById('comments'));
+    }
+    // fancybox
+    $.fancybox.defaults.wheel = false;
+    $.fancybox.defaults.infobar = false;
+    $.fancybox.defaults.buttons = [
+        'fullScreen',
+        // 'thumbs',
+        'zoom',
+        'close'
+    ];
+})();</script>
+        <div class="scroll-top">
+    <span class="arrow-icon"></span>
+</div>
+        <footer class="app-footer">
+    <p class="copyright" align="center">
+        &copy; 2018 created by <a onClick='window.open("https://github.com/needal")'>cym</a> powered by <a onClick='window.open("https://hexo.io/zh-cn/docs")'>hexo<a/>
+    </p>
+</footer>
+
+<script src="/deps/js/function.min.js" type="application/javascript"></script>
+
+<script type="application/javascript">
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
+    ga.l=+new Date;
+    ga('create', "", 'auto');
+    ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js" type="application/javascript"></script>
+    </body>
+</html>
