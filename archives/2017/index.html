@@ -53,31 +53,6 @@
             window.onblur = function () {
                 document.title = ' 等死 (～ o ～)~zZ';
             };
-			// 社会核心价值观
-			$("body").click(function(e) {
-				var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
-				var $i = $("<span/>").text(a[a_idx]);
-				a_idx = (a_idx + 1) % a.length;
-				var x = e.pageX,
-				y = e.pageY;
-				$i.css({
-					"z-index": 15555569,
-					"top": y - 20,
-					"left": x,
-					"position": "absolute",
-					"font-weight": "bold",
-					"color": "#ff6651"
-				});
-				$("body").append($i);
-				$i.animate({
-					"top": y - 180,
-					"opacity": 0
-				},
-				1500,
-				function() {
-					$i.remove()
-				})
-			});
         })();
     </script>        
 </head>
@@ -137,6 +112,7 @@
     <h2>Archive</h2>
     <p class="post-date">文章归档</p>
 </div>
+<div class="main-body">
 <main class="app-body" id="archives">
     
     
@@ -197,7 +173,7 @@
 </section>
     
 </main>
-
+</div>
 <script>(function(){
     var banner = "/deps/partial/imgs/index/banner_sky-line.jpg"
     $('#article-banner').css({'background-image': 'url(' + banner + ')'})
@@ -219,6 +195,32 @@
     ga.l=+new Date;
     ga('create', "", 'auto');
     ga('send', 'pageview');
+    // 社会核心价值观
+    var a_idx = 0;
+    $(".main-body").click(function(e) {
+        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+        var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 15555569,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "#FF0000"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove()
+        })
+    });
 </script>
 <script async src="https://www.google-analytics.com/analytics.js" type="application/javascript"></script>
     </body>
