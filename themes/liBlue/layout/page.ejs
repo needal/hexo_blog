@@ -2,6 +2,7 @@
     <h2><%- page.title %></h2>
     <p class="post-date"><%- date(page.date, "MM/DD/YYYY") %></p>
 </div>
+<div class="main-body">
 <main class="app-body flex-box">
     <article class="post-article">
         <section class="markdown-content">
@@ -22,6 +23,7 @@
         <%- partial('_partial/catalog') %>
     <% } %>
 </main>
+</div>
 
 <script>(function(){
     var banner = "<%- theme.pages_uri_banner %>";

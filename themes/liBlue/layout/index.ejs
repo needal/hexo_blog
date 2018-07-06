@@ -8,6 +8,7 @@
     <h2>无聊叙事风</h2>
     <p class="post-date"><%- date(page.date, "MM/DD/YYYY") %></p>
 </div>
+<div class="main-body">
 <main class="app-body">
     <% page.posts.each(function(post) { %>
         <article class="article-card">
@@ -23,7 +24,7 @@
         <%- partial('_partial/pager') %>
     <% } %>
 </main>
-
+</div>
 <script>
     (function () {
         var banner = '<%- theme.index_uri_banner %>'
