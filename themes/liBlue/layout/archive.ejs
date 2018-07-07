@@ -2,7 +2,6 @@
     <h2>Archive</h2>
     <p class="post-date">文章归档</p>
 </div>
-<div class="main-body">
 <main class="app-body" id="archives">
     <% let years = {}; %>
     <%
@@ -18,7 +17,7 @@
         <%- partial('_partial/archive', { year: year, posts: years[year].reverse() }) %>
     <% } %>
 </main>
-</div>
+
 <script>(function(){
     var banner = "<%- theme.index_uri_banner %>"
     $('#article-banner').css({'background-image': 'url(' + banner + ')'})
