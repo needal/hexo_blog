@@ -104,7 +104,7 @@ h2.article-head {
   box-sizing: border-box;
   top: 0;
   left: 0;
-  padding: 150px 20px 20px 20px;
+  padding: 8% 20px 3% 20px;
   text-align: center;
   position: relative;
   background-repeat: no-repeat;
@@ -377,7 +377,7 @@ h2.article-head {
 }
 @media screen and (max-width: 480px) {
   .header-container {
-    padding: 6px 20px;
+    padding: 6px 15px;
     position: relative;
   }
 }
@@ -411,14 +411,14 @@ h2.article-head {
   float: right;
   padding: 0;
 }
-@media screen and (max-width: 480px) {
-  .right-list {
-    display: none;
-  }
-}
 .list-item {
   display: inline-block;
   margin: 0 1rem;
+}
+@media screen and (max-width: 480px) {
+  .list-item {
+    margin: 0 0.1rem;
+  }
 }
 .item-link {
   height: 40px;
