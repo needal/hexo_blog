@@ -417,7 +417,7 @@ h2.article-head {
 }
 @media screen and (max-width: 480px) {
   .list-item {
-    margin: 0 0.1rem;
+    margin: 0 0.2rem;
   }
 }
 .item-link {
