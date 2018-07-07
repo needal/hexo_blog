@@ -120,7 +120,6 @@
     <h2>prism和animation舔砖加瓦</h2>
     <p class="post-date">06/24/2018</p>
 </div>
-<div class="main-body">
 <main class="app-body flex-box">
     <article class="post-article">
         <section class="markdown-content">
@@ -178,12 +177,11 @@
 </aside>
     
 </main>
-</div>
 
 <script>(function(){
     var banner = "/deps/partial/imgs/pages/banner_girl.png";
     $('#article-banner').css({'background-image': 'url(' + banner + ')'});
-    $('#article-banner').css('padding','11% 20px 40px');
+    $('#article-banner').css('padding','11% 20px 2%');
     $('#article-banner').css('background-position','50% 60%');
     $('.header').removeClass('fixed-header');
 })();</script>
@@ -229,7 +227,7 @@
     ga('send', 'pageview');
     // 社会核心价值观
     var a_idx = 0;
-    $(".main-body").click(function(e) {
+    $(".markdown-content").click(function(e) {
         var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
