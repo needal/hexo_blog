@@ -10,7 +10,7 @@
         <% if (page.title){ %>
             <%= page.title %>
         <% } else { %>
-            <%= config.title %>
+            <%= config.focus_title %>
         <% } %>
     </title>
     <link  href="<%- theme.uri_mincss_style %>"      type="text/css" rel="stylesheet">
@@ -55,11 +55,11 @@
                 if ('<%- page.title %>'){
                     document.title = '<%- page.title %>';
                 } else {
-                    document.title = '<%- config.title %>';
+                    document.title = '<%- config.focus_title %>';
                 }
             };
             window.onblur = function () {
-                document.title = ' 等死 (～ o ～)~zZ';
+                document.title = '<%- config.bulr_title %>';
             };
         })();
     </script>        
