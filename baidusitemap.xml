@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://leepcell.xyz/article/blog-devops/</loc>
+    <lastmod>2018-07-15T15:45:35.271Z</lastmod>
+    <data>
+        <display>
+        <title>尝尝自动部署的甜头</title>
+        <pubTime>2018-06-28T14:44:18.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://leepcell.xyz/article/user-comment/</loc>
     <lastmod>2018-07-01T16:36:05.433Z</lastmod>
     <data>
@@ -18,21 +33,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>https://leepcell.xyz/article/blog-devops/</loc>
-    <lastmod>2018-07-01T15:45:37.640Z</lastmod>
-    <data>
-        <display>
-        <title>尝尝自动部署的甜头</title>
-        <pubTime>2018-06-28T14:44:18.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>https://leepcell.xyz/article/first-use-hexo/</loc>

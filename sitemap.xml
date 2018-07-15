@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://leepcell.xyz/article/blog-devops/</loc>
+    
+    <lastmod>2018-07-15T15:45:35.271Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://leepcell.xyz/article/user-comment/</loc>
     
     <lastmod>2018-07-01T16:36:05.433Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://leepcell.xyz/about/index.html</loc>
     
     <lastmod>2018-07-01T16:02:31.424Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://leepcell.xyz/article/blog-devops/</loc>
-    
-    <lastmod>2018-07-01T15:45:37.640Z</lastmod>
     
   </url>
   
