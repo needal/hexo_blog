@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'font_xingshu';
+  src: url("../font/font_xingshu.eot");
+  src: url("../font/font_xingshu.eot#iefix") format('embedded-opentype'), url("../font/font_xingshu.woff") format('woff'), url("../font/font_xingshu.ttf") format('truetype'), url("../font/font_xingshu.svg#xingshu") format('svg');
+}
+@font-face {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "Microsoft JhengHei", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "WenQuanYi Micro Hei", SimSun, sans-serif;
   font-weight: 400;
 }
@@ -92,6 +97,8 @@ h2.article-head {
   color: #34495e;
 }
 .more {
+  font-family: 'font_xingshu';
+  letter-spacing: 1px;
   font-weight: 600;
   display: inline-block;
   transition: all 0.3s;
@@ -119,6 +126,7 @@ h2.article-head {
 #article-banner h2 {
   margin: 0.2em 0;
   font-size: 2.2em;
+  font-family: "font_xingshu";
   color: #fff;
   opacity: 0;
   transform: translateY(-20px);
@@ -405,6 +413,7 @@ h2.article-head {
   color: #fff;
   font-size: 1.5em;
   line-height: 40px;
+  letter-spacing: 1px;
 }
 .right-list {
   list-style: none;
