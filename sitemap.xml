@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://leepcell.xyz/about/index.html</loc>
+    
+    <lastmod>2018-07-17T16:08:08.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://leepcell.xyz/article/confused_july/</loc>
+    
+    <lastmod>2018-07-17T16:06:53.052Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://leepcell.xyz/article/blog-devops/</loc>
     
     <lastmod>2018-07-15T15:45:35.271Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://leepcell.xyz/article/user-comment/</loc>
     
     <lastmod>2018-07-01T16:36:05.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://leepcell.xyz/about/index.html</loc>
-    
-    <lastmod>2018-07-01T16:02:31.424Z</lastmod>
     
   </url>
   

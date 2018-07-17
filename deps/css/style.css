@@ -172,6 +172,7 @@ h2.article-head {
 .post-article {
   margin-top: 0;
   width: 100%;
+  letter-spacing: 0.2px;
 }
 .image-view-wrap {
   position: fixed;

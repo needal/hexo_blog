@@ -10,7 +10,7 @@
     
     <title>
         
-            gitment使用
+            七月迷茫季
         
     </title>
     <link  href="/deps/css/style.css"      type="text/css" rel="stylesheet">
@@ -52,8 +52,8 @@
             }
 			// 改变title
             window.onfocus = function () {
-                if ('gitment使用'){
-                    document.title = 'gitment使用';
+                if ('七月迷茫季'){
+                    document.title = '七月迷茫季';
                 } else {
                     document.title = '个人博客';
                 }
@@ -105,15 +105,16 @@
     </div>
 </header>
         <div id="article-banner">
-    <h2>gitment使用</h2>
-    <p class="post-date">7月2日晚上11点50分</p>
+    <h2>七月迷茫季</h2>
+    <p class="post-date">7月18日晚上10点51分</p>
 </div>
 <main class="app-body flex-box">
     <article class="post-article">
         <section class="markdown-content">
-            <h2 id="简短介绍"><a href="#简短介绍" class="headerlink" title="简短介绍"></a>简短介绍</h2><p>gitment是<a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">imsun</a>开源的一款基于github issues的评论系统，因为不需要任何后端，所以尤为适合那些使用hexo搭建在github pages上的静态博客或项目。<br>虽然只能使用github账号，但是可以进行评论、点赞操作，而且支持markdown格式，功能比较丰富。demo例子在<a href="https://imsun.github.io/gitment/" target="_blank" rel="noopener">Gitment</a>。</p>
-<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><p>看到官网的文档，使用起来还算比较方便的，先去注册一个github的OAuth Apps，把生成的clientId和clientSecret放到gitment生成的对象里，然后再填写githubId和储存评论的repo。最后初始化生成评论的dom元素就ok了。</p>
-<h2 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h2><p>目前每个页面都要进行gitment的初始化和渲染dom元素，后续作者可能会推出全局初始化。<br>我在开发的时候页面访问的是localhost:4000，但是部署后访问的是<a href="https://leepcell.xyz">https://leepcell.xyz</a> ，而我OAuth Apps中Authorization callback URL填写的是部署后的url，所以我在本地点击评论的login按钮时返回的是<a href="https://leepcell.xyz/?error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https%3A%2F%2Fdeveloper.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch">这一大长串的东东</a> ，看了一下大致是验证错误。<br>我明确自己配置没有问题，认为估计是当前url和验证返回url不一样导致的，于是就直接部署了。发现果然没有问题了，在此mark一下  ┐(・o・)┌ </p>
+            <h1 id="天热烦躁"><a href="#天热烦躁" class="headerlink" title="天热烦躁"></a>天热烦躁</h1><p>最近好像到了三伏天，天天都37,38度，烤的我头皮发麻，住的小区旁边也没有我最喜欢的果汁卖，整个人就像个快胀气的皮球。整天做事都提不起精神，对以后也没信心，更新也缓下来了，想就这样混日子了。<strong>可能一年总有那么几天迷茫吧（ﾉ´д｀）</strong>。</p>
+<h1 id="提不起刀了？"><a href="#提不起刀了？" class="headerlink" title="提不起刀了？"></a>提不起刀了？</h1><p>因为之前有几张图片比较大，虽然我用ps压缩分辨率了，但是还占了1M，再加上github pages访问比较慢，所以打算把图片迁到七牛云上，但是好像需要绑定一个备案过的域名。百度了下备案是真他喵（￣へ￣）麻烦，但是不备案是真的啥都干不了，只能在腾讯云申请备案了，估计还要1星期才能弄好。要8月份再见了 (｀◕‸◕´+)<br><a href="/images/confused_july/fucking_work.jpg" data-fancybox="images"><br> <img src="/images/confused_july/fucking_work.jpg" alt="找不到图片了^~~" title="gtmd"><br> </a></p>
+<h1 id="我上车了"><a href="#我上车了" class="headerlink" title="我上车了"></a>我上车了</h1><p> 之前发现腾讯云+校园只要10元/月，能买1年续费2年，而且不是学生也能通过验证，立马狠下心来将我这个月的冰棍费上缴了 (•ิ_•ิ) ，以后就有自己的服务器了，够我用好久了，也不用每次访问等好久了，舒服~</p>
+<h1 id="路边的野花采一采"><a href="#路边的野花采一采" class="headerlink" title="路边的野花采一采"></a>路边的野花采一采</h1><p> 之前在搜索笔记工具时，发现了一个清新的<a href="https://github.com/IceEnd/Yosoro" target="_blank" rel="noopener">记笔记工具</a>，虽然现在功能比较简单，但是UI风格还是非常漂亮的，抢先体验一波，感觉写markdown笔记还是很不错。主要使用了electron生成mac、windows、linux客户端，react做前端框架，antd做样式组件，onedrive进行多端文件同步。<br>不足的是我目前还没找到怎么上传图片等文件，只能纯文字，而且编写的时候有时候光标显示有问题，输入法的字会显示在上方，不像之前在光标附近，看起来有点麻烦。<br><strong>支持作者大大，点一个star</strong>。</p>
 
         </section>
         </br>
@@ -125,20 +126,13 @@
         
     <div class="nav-container">
         
-            <a class="nav-right" href="/article/blog-devops/">
+            <a class="nav-right" href="/article/user-comment/">
                 
-                    尝尝自动部署的甜头
+                    gitment使用
                 
                 <span class="nav-arrow"> →</span>
             </a>
         
-        
-            <a class="nav-left" href="/article/confused_july/">
-                <span class="nav-arrow">← </span>
-                
-                    七月迷茫季
-                
-            </a>
         
     </div>
 
@@ -151,7 +145,7 @@
     <div class="toc-main">
         <strong class="toc-title">Catalog</strong>
         
-            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#简短介绍"><span class="toc-nav-text">简短介绍</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#基本使用"><span class="toc-nav-text">基本使用</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#小问题"><span class="toc-nav-text">小问题</span></a></li></ol>
+            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#天热烦躁"><span class="toc-nav-text">天热烦躁</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#提不起刀了？"><span class="toc-nav-text">提不起刀了？</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#我上车了"><span class="toc-nav-text">我上车了</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#路边的野花采一采"><span class="toc-nav-text">路边的野花采一采</span></a></li></ol>
         
     </div>
 </aside>
@@ -170,7 +164,7 @@
     var gitmentConfig = "needal"
     if (gitmentConfig !== 'undefined') {
         var gitment = new Gitment({
-            //id: "article/user-comment/",
+            //id: "article/confused_july/",
             owner: "needal",
             repo: "hexo_blog",
             oauth: {client_id: "6de9f8a023dba13d8ab7", client_secret: "bb250d74da3906094ed23569090954df00e66de0"},
