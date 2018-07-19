@@ -97,7 +97,6 @@ h2.article-head {
   color: #34495e;
 }
 .more {
-  font-family: 'font_xingshu';
   letter-spacing: 1px;
   font-weight: 600;
   display: inline-block;
@@ -221,6 +220,13 @@ h2.article-head {
 .opacity {
   opacity: 1;
   transform: translate(0, 0);
+}
+#aplayer {
+  position: absolute;
+  top: 34%;
+  right: 10%;
+  width: 30%;
+  z-index: 199;
 }
 #archives:before {
   position: absolute;

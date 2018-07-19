@@ -18,29 +18,33 @@
     <link  href="/deps/partial/mincss/nprogress.min.css"  type="text/css" rel="stylesheet">
     <script src="/deps/js/nprogress.min.js"   type="application/javascript"></script>
     <link href="/deps/partial/mincss/animate.min.css"   type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.css"   type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.js"   type="application/javascript"></script>
        
     <script>
         var _hmt = _hmt || [];
         (function() {
             // 百度统计
-            if('true'){
-                var hm = document.createElement("script");
-                hm.src = "https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9";
-                var s = document.getElementsByTagName("script")[0]; 
-                s.parentNode.insertBefore(hm, s);
-            }
-            // 百度js推送
-            if('true'){
-                var bp = document.createElement('script');
-                var curProtocol = window.location.protocol.split(':')[0];
-                if (curProtocol === 'https') {
-                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            if('dev'==='product'){
+                if('true'){
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9";
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
                 }
-                else {
-                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                // 百度js推送
+                if('true'){
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    }
+                    else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
                 }
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(bp, s);
             }
 			// 改变title
             window.onfocus = function () {
@@ -104,16 +108,17 @@
         <circle stroke="white" stroke-width="10" cx="50%" cy="50%" r="50%" fill="url(#avatar)"/>
     </svg>
     <h2>无聊叙事风</h2>
-    <p class="post-date">7月18日凌晨12点10分</p>
+    <p class="post-date">7月20日凌晨12点14分</p>
 </div>
+<div id="aplayer"></div>
 <main class="app-body">
     
         <article class="article-card">
             <h2 class="article-head">
-                <a href="/article/confused_july/">七月迷茫季</a>
+                <a href="/article/confused-july/">七月迷茫季</a>
             </h2>
             <p class="article-date">2018年7月18日</p>
-            <a class="more" href="/article/confused_july/">阅读更多</a>
+            <a class="more" href="/article/confused-july/">阅读更多</a>
         </article>
     
         <article class="article-card">
@@ -175,7 +180,6 @@
 
     
 </main>
-
 <script>
     (function () {
         var banner = '/deps/partial/imgs/index/banner_sky-line.jpg'
@@ -183,6 +187,16 @@
             'background-image': 'url(' + banner + ')'
         })
         $('.header').removeClass('fixed-header')
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            audio: [{
+                name: 'Love Story',
+                artist: 'Edward Maya/Violet Light',
+                url: '/music/'+'Edward Maya,Violet Light - Love Story.mp3',
+                cover: '/music/'+'Love Story_cover.jpg',
+                theme: '#6cf'
+            }]
+        });
     })();
 </script>
         <div class="scroll-top">
@@ -190,12 +204,11 @@
 </div>
         <footer class="app-footer">
     <p class="copyright" align="center">
-        &copy; 2018 created by <a onClick='window.open("https://github.com/needal")'>cym</a> powered by <a onClick='window.open("https://hexo.io/zh-cn/docs")'>hexo<a/>
+        &copy; 2018 created by <a onClick='window.open("https://github.com/needal")'><strong>cym</strong></a> powered by <a onClick='window.open("https://hexo.io/zh-cn/docs")'><strong>hexo</strong><a/>
     </p>
 </footer>
 
 <script src="/deps/js/function.min.js" type="application/javascript"></script>
-
 <script type="application/javascript">
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
     ga.l=+new Date;
