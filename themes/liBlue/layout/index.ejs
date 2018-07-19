@@ -8,6 +8,7 @@
     <h2>无聊叙事风</h2>
     <p class="post-date"><%- date(page.date, "M月D日Ah点mm分") %></p>
 </div>
+<div id="aplayer"></div>
 <main class="app-body">
     <% page.posts.each(function(post) { %>
         <article class="article-card">
@@ -23,7 +24,6 @@
         <%- partial('_partial/pager') %>
     <% } %>
 </main>
-
 <script>
     (function () {
         var banner = '<%- theme.index_uri_banner %>'
@@ -31,5 +31,15 @@
             'background-image': 'url(' + banner + ')'
         })
         $('.header').removeClass('fixed-header')
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            audio: [{
+                name: 'Love Story',
+                artist: 'Edward Maya/Violet Light',
+                url: '<%- theme.music_prefix %>'+'Edward Maya,Violet Light - Love Story.mp3',
+                cover: '<%- theme.music_prefix %>'+'Love Story_cover.jpg',
+                theme: '#6cf'
+            }]
+        });
     })();
 </script>

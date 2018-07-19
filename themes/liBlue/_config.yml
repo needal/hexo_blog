@@ -1,5 +1,6 @@
 excerpt_link: 阅读更多
 
+profile: dev
 # menu on the page
 menu:
 #  首页: /
@@ -85,6 +86,9 @@ googleanalytics_uri: https://www.google-analytics.com/analytics.js
 baiduanalytics: true
 baiduanalytics_uri: https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9
 
-
+# aplayer
+uri_mincss_aplayer: https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.css
+uri_minjs_aplayer: https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.js
+music_prefix: /music/
 ## Enable baidu SEO push 
 baidu_push: true

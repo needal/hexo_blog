@@ -18,6 +18,8 @@
     <link  href="<%- theme.uri_mincss_nprogress %>"  type="text/css" rel="stylesheet">
     <script src="<%- theme.uri_minjs_nprogress %>"   type="application/javascript"></script>
     <link href="<%- theme.uri_mincss_animate %>"   type="text/css" rel="stylesheet">
+    <link href="<%- theme.uri_mincss_aplayer %>"   type="text/css" rel="stylesheet">
+    <script src="<%- theme.uri_minjs_aplayer %>"   type="application/javascript"></script>
     <% if (page.title){ %>
         <link  href="<%- theme.uri_mincss_prism %>"      type="text/css" rel="stylesheet">
         <script src="<%- theme.uri_minjs_prism %>"   type="application/javascript"></script>
@@ -25,30 +27,31 @@
         <script src="<%- theme.uri_minjs_fancybox %>"     type="application/javascript"></script>
         <link  href="<%- theme.uri_mincss_gitment %>"    type="text/css" rel="stylesheet">
         <script src="<%- theme.uri_minjs_gitment %>"     type="application/javascript"></script>
-        <script src="<%- theme.uri_minjs_gitment %>"     type="application/javascript"></script>
     <% } %>   
     <script>
         var _hmt = _hmt || [];
         (function() {
             // 百度统计
-            if('<%- theme.baiduanalytics %>'){
-                var hm = document.createElement("script");
-                hm.src = "<%- theme.baiduanalytics_uri %>";
-                var s = document.getElementsByTagName("script")[0]; 
-                s.parentNode.insertBefore(hm, s);
-            }
-            // 百度js推送
-            if('<%- theme.baidu_push %>'){
-                var bp = document.createElement('script');
-                var curProtocol = window.location.protocol.split(':')[0];
-                if (curProtocol === 'https') {
-                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+            if('<%- theme.profile %>'==='product'){
+                if('<%- theme.baiduanalytics %>'){
+                    var hm = document.createElement("script");
+                    hm.src = "<%- theme.baiduanalytics_uri %>";
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
                 }
-                else {
-                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                // 百度js推送
+                if('<%- theme.baidu_push %>'){
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    }
+                    else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
                 }
-                var s = document.getElementsByTagName("script")[0];
-                s.parentNode.insertBefore(bp, s);
             }
 			// 改变title
             window.onfocus = function () {
