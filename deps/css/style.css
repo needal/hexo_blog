@@ -144,6 +144,7 @@ h2.article-head {
   transition: all 0.4s;
   transition-delay: 0.05s;
   font-weight: bold;
+  letter-spacing: 1px;
 }
 #article-banner .arrow-down {
   display: flex;
@@ -225,7 +226,9 @@ h2.article-head {
   position: absolute;
   top: 34%;
   right: 10%;
-  width: 30%;
+  width: 23%;
+  min-width: 400px;
+  margin-top: -10px;
   z-index: 199;
 }
 #archives:before {
