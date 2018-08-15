@@ -109,7 +109,7 @@
 </header>
         <div id="article-banner">
     <h2>测试1</h2>
-    <p class="post-date">8月15日23点16分</p>
+    <p class="post-date"></p>
 </div>
 <main class="app-body flex-box">
     <article class="post-article">
@@ -171,6 +171,7 @@
         })
         gitment.render(document.getElementById('comments'));
     }
+    $('.post-date').text('8月15日23点49分')
     // fancybox
     $.fancybox.defaults.wheel = false;
     $.fancybox.defaults.infobar = false;
