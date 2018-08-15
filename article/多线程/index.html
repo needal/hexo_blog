@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    
+    <link href="/deps/partial/imgs/favicon.ico" type="image/x-icon" rel="icon">
+    
+    <title>
+        
+            了解JAVA线程池
+        
+    </title>
+    <link  href="/deps/css/style.css"      type="text/css" rel="stylesheet">
+    <script src="/deps/js/jquery.min.js"      type="application/javascript"></script>
+    <link  href="/deps/partial/mincss/nprogress.min.css"  type="text/css" rel="stylesheet">
+    <script src="/deps/js/nprogress.min.js"   type="application/javascript"></script>
+    <link href="/deps/partial/mincss/animate.min.css"   type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.css"   type="text/css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.0/APlayer.min.js"   type="application/javascript"></script>
+    
+        <link  href="/deps/partial/mincss/prism.min.css"      type="text/css" rel="stylesheet">
+        <script src="/deps/js/prism.min.js"   type="application/javascript"></script>
+        <link  href="/deps/partial/mincss/fancybox.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/fancybox.min.js"     type="application/javascript"></script>
+        <link  href="/deps/partial/mincss/gitment.min.css"    type="text/css" rel="stylesheet">
+        <script src="/deps/js/gitment.min.js"     type="application/javascript"></script>
+       
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            // 百度统计
+            if('dev'==='product'){
+                if('true'){
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?ae543e855bdf60532e8d24f9d53957e9";
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
+                }
+                // 百度js推送
+                if('true'){
+                    var bp = document.createElement('script');
+                    var curProtocol = window.location.protocol.split(':')[0];
+                    if (curProtocol === 'https') {
+                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                    }
+                    else {
+                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                    }
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(bp, s);
+                }
+            }
+			// 改变title
+            window.onfocus = function () {
+                if ('了解JAVA线程池'){
+                    document.title = '了解JAVA线程池';
+                } else {
+                    document.title = '个人博客';
+                }
+            };
+            window.onblur = function () {
+                document.title = '等死 (～ o ～)~zZ';
+            };
+        })();
+    </script>        
+</head>
+    <body>
+        <header class="header fixed-header">
+    <div class="header-container">
+        <a class="home-link" href="/">
+            此夜掩目的博客
+        </a>
+        <ul class="right-list">
+            
+                <li class="list-item">
+                    
+                        <a href="/archives/" class="item-link">归档</a>
+                    
+                </li>
+            
+                <li class="list-item">
+                    
+                        <a href="/about" class="item-link">关于</a>
+                    
+                </li>
+            
+        </ul>
+        <div class="menu-mask">
+            <ul class="menu-list">
+                
+                    <li class="menu-item">
+                        
+                            <a href="/archives/" class="menu-link">归档</a>
+                        
+                    </li>
+                
+                    <li class="menu-item">
+                        
+                            <a href="/about" class="menu-link">关于</a>
+                        
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</header>
+        <div id="article-banner">
+    <h2>了解JAVA线程池</h2>
+    <p class="post-date">8月15日晚上8点44分</p>
+</div>
+<main class="app-body flex-box">
+    <article class="post-article">
+        <section class="markdown-content">
+            <h1 id="为什么要使用线程池"><a href="#为什么要使用线程池" class="headerlink" title="为什么要使用线程池"></a>为什么要使用线程池</h1><ol>
+<li>创建/销毁线程需要系统开销，过于频繁的创建/销毁线程，会影响效率。</li>
+<li>线程并发数量过多，抢占资源而导致系统资源不足阻塞。</li>
+<li>管理线程，对线程制定一些策略。<br>所以我们要用线程池来缓存线程，减少系统开销，控制并发线程数量。</li>
+</ol>
+<h1 id="线程池之ThreadPoolExecutor概述"><a href="#线程池之ThreadPoolExecutor概述" class="headerlink" title="线程池之ThreadPoolExecutor概述"></a>线程池之ThreadPoolExecutor概述</h1><p>java的线程池支持主要通过ThreadPoolExecutor来实现。<br>四大线程池FixedThreadPool，SingledThreadPool，CachedThreadPool，ScheduledThreadExecutor都是ThreadPoolExecutor的工厂类，只是参数不同。<br>类继承关系：<br>ExecutorService——&gt;AbstractExecutorService——&gt;ThreadPoolExecutor<br>ExecutorService是ThreadPoolExecutor的顶层接口，使用线程池中的线程提交每个提交的任务。一般我们使用Executors的工厂方法比如Executors.newSingledThreadExecutor来创建ExecutorService。</p>
+<h2 id="ThreadPoolExecutor核心参数"><a href="#ThreadPoolExecutor核心参数" class="headerlink" title="ThreadPoolExecutor核心参数"></a>ThreadPoolExecutor核心参数</h2><ul>
+<li><font color="#ff502c">corePoolSize</font>核心线程池数量</li>
+<li><font color="#ff502c">maximumPoolSize</font>最大线程池数量</li>
+<li><font color="#ff502c">keepAliveTime</font>线程空闲后存活时间，<font color="#ff502c">unit</font>时间单位</li>
+<li><font color="#ff502c">workQueue</font>存放任务的阻塞队列</li>
+<li><font color="#ff502c">handler</font>最大线程池和阻塞队列都满了以后的处理策略</li>
+</ul>
+<h3 id="线程状态"><a href="#线程状态" class="headerlink" title="线程状态"></a>线程状态</h3><p><img src="https://raw.githubusercontent.com/needal/notes/master/img/2018-08-14.17.16.08-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2.png" alt="2018-08-14.17.16.08-线程状态切换.png"></p>
+<ul>
+<li><strong>新建</strong><br>线程在被new实例化出来以后，就处于新建状态。</li>
+<li><strong>就绪</strong><br>线程执行start()以后，该线程处于就绪状态，并不说明该线程立即执行。</li>
+<li><strong>运行</strong><br>当就绪的线程获取被cpu调度获取cpu时间时，该线程进入运行状态，执行线程的任务。</li>
+<li><strong>阻塞</strong><br>当运行中的线程进行IO操作获取数据或者进入同步代码块尝试获取其他锁，该线程进入阻塞状态，此时该线程释放cpu时间，但仍拥有原先锁，当阻塞结束时，该线程重新进入运行状态，而不会进入就绪态。</li>
+<li><strong>睡眠</strong><br>线程执行Thread.sleep()以后，线程进入睡眠状态，释放拥有的cpu时间，但不释放拥有的锁，睡眠的时间结束后，进入就绪状态重新竞争cpu时间。 </li>
+<li><strong>等待</strong><br>拥有的对象锁调用了Object.wait()或者ThreadB.join()后，线程进入等待状态。如果调用的是Object.wait()，线程会释放拥有的cpu时间和锁，当时间结束或Object.notify()后进入就绪状态。如果调用的是ThreadB.join()，当前线程会获取ThreadB的对象锁，而不会释放原先的对象锁，当线程B执行完毕时，当前线程才会进入就绪状态。</li>
+<li><strong>退出</strong><br>线程正常执行完毕或者被IO阻塞的线程IO异常关闭后，线程进入退出状态，即结束状态。</li>
+</ul>
+<h3 id="线程池状态"><a href="#线程池状态" class="headerlink" title="线程池状态"></a>线程池状态</h3><p><img src="https://raw.githubusercontent.com/needal/notes/master/img/2018-08-14.19.34.40-%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%8A%B6%E6%80%81%E5%88%87%E6%8D%A2.jpg" alt="2018-08-14.19.34.40-线程池状态切换.jpg"></p>
+<ul>
+<li><strong>RUNNING</strong><br>运行态，可处理新任务并执行队列中的任务  </li>
+<li><strong>SHUTDOWN</strong><br>关闭态，调用shutDown方法后，不接受新任务，但处理队列中的任务  </li>
+<li><strong>STOP</strong><br>停止态，调用shutDownNow方法后,不接受新任务，不处理队列中任务，且打断运行中任务  </li>
+<li><strong>TIDYING</strong><br>整理态，所有任务已经结束，在调用shutdown()/shuntdownNow()中都会尝试更新为此状态。当workerCount = 0 ，将执行terminated()方法  </li>
+<li><strong>TERMINATED</strong><br>结束态，terminated() 方法已完成<br>当在execute(Runnable)方法中提交新任务时，且正在运行的线程数小于corePoolSize，即使其他工作线程处于空闲状态，也会创建一个新线程来出来该请求。如果正在运行的线程数大于corePoolSize但小于maximumPoolSize，则会把新线程优先使用corePoolSize中空闲的线程，如果corePoolSize中没有空闲的，那就放到一个阻塞队列中，当阻塞队列满时才会创建新的线程；如果corePoolSize中的线程又空闲了就会复用线程。如果正在运行的线程池数大于等于maximumPoolSize，则新线程会被拒绝。</li>
+</ul>
+<h1 id="线程池的配置"><a href="#线程池的配置" class="headerlink" title="线程池的配置"></a>线程池的配置</h1><p>线程池并不是越大越好，也不是越小越好，需要根据实际情况得出最佳配置。<br>通常我们是根据任务执行的性质来确定线程池的大小。</p>
+<ul>
+<li>IO密集型任务：线程并不是一直在运行，而是被IO阻塞，所以可以多配置线程。<strong>一般为CPU个数*2</strong>。</li>
+<li>CPU密集型任务：大量复杂的运行，而CPU一般是2或4核较小，所以线程多了也无法获取CPU时间，反而占用了内存。<strong>一般与CPU个数相同</strong>。</li>
+</ul>
+<h1 id="线程池的关闭"><a href="#线程池的关闭" class="headerlink" title="线程池的关闭"></a>线程池的关闭</h1><p>executorService有两个关闭的方法，shutdown和shutdownNow，<strong>区别主要是状态改变的不同</strong>。<br>shutdown方法后，ThreadPoolExecutor会变成SHUTDOWN状态，不接受新任务，但还要等待处理队列中的任务。类似于tcp协议的单向关闭。<br>shutdownNow方法后，ThreadPoolExecutor会变成STOP状态，不接受新任务，不处理队列中的任务，对执行中的任务执行中断，但若执行中的线程未处理中断，则仍继续执行，所以shutdownNow方法后并不代表立刻关闭。<br>仅仅执行shutdown/shutdownNow方法是不够的，执行完以后还需额外执行awaitTermination 方法，用于控制shutdown/shutdownNow以后等待的时间，防止任务无限期运行，因为shutdown/shutdownNow不能保证线程一定停止。</p>
+
+        </section>
+        </br>
+        <div class="article-footer">
+            </br>
+            <p>本文可能过时失效，若需更新，请留言</p>
+            <p>本博客文章均为原创，转载请注明来源</p>
+        </div>
+        
+    <div class="nav-container">
+        
+            <a class="nav-right" href="/article/confused-july/">
+                
+                    七月迷茫季
+                
+                <span class="nav-arrow"> →</span>
+            </a>
+        
+        
+    </div>
+
+        
+            <div id="comments"></div>
+        
+    </article>
+    
+        <aside class="catalog-container">
+    <div class="toc-main">
+        <strong class="toc-title">Catalog</strong>
+        
+            <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#为什么要使用线程池"><span class="toc-nav-text">为什么要使用线程池</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#线程池之ThreadPoolExecutor概述"><span class="toc-nav-text">线程池之ThreadPoolExecutor概述</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ThreadPoolExecutor核心参数"><span class="toc-nav-text">ThreadPoolExecutor核心参数</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#线程状态"><span class="toc-nav-text">线程状态</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#线程池状态"><span class="toc-nav-text">线程池状态</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#线程池的配置"><span class="toc-nav-text">线程池的配置</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#线程池的关闭"><span class="toc-nav-text">线程池的关闭</span></a></li></ol>
+        
+    </div>
+</aside>
+    
+</main>
+
+<script>(function(){
+    var banner = "/deps/partial/imgs/pages/banner_girl.png";
+    $('#article-banner').css({'background-image': 'url(' + banner + ')'});
+    $('#article-banner').css('background-position','50% 60%');
+    $('.header').removeClass('fixed-header');
+})();</script>
+
+<script>(function(){
+    // gitment
+    var gitmentConfig = "needal"
+    if (gitmentConfig !== 'undefined') {
+        var gitment = new Gitment({
+            //id: "article/多线程/",
+            owner: "needal",
+            repo: "hexo_blog",
+            oauth: {client_id: "6de9f8a023dba13d8ab7", client_secret: "bb250d74da3906094ed23569090954df00e66de0"},
+            theme: {render(state, instance){const container = document.createElement('div');container.lang="en-US";container.className='gitment-container gitment-root-container';container.appendChild(instance.renderHeader(state, instance));container.appendChild(instance.renderEditor(state, instance));container.appendChild(instance.renderComments(state, instance));container.appendChild(instance.renderFooter(state, instance));return container;}}
+        })
+        gitment.render(document.getElementById('comments'));
+    }
+    // fancybox
+    $.fancybox.defaults.wheel = false;
+    $.fancybox.defaults.infobar = false;
+    $.fancybox.defaults.buttons = [
+        'fullScreen',
+        // 'thumbs',
+        'zoom',
+        'close'
+    ];
+})();</script>
+        <div class="scroll-top">
+    <span class="arrow-icon"></span>
+</div>
+        <footer class="app-footer">
+    <p class="copyright" align="center">
+        &copy; 2018 created by <a onClick='window.open("https://github.com/needal")'><strong>cym</strong></a> powered by <a onClick='window.open("https://hexo.io/zh-cn/docs")'><strong>hexo</strong><a/>
+    </p>
+</footer>
+
+<script src="/deps/js/function.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};
+    ga.l=+new Date;
+    ga('create', "", 'auto');
+    ga('send', 'pageview');
+    // 社会核心价值观
+    var a_idx = 0;
+    $(".markdown-content").click(function(e) {
+        var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善");
+        var $i = $("<span/>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 15555569,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "#FF0000"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove()
+        })
+    });
+</script>
+<script async src="https://www.google-analytics.com/analytics.js" type="application/javascript"></script>
+    </body>
+</html>
